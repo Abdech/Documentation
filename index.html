@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FreeCodeCamp Technical Documentation</title>
+    <link rel="stylesheet" href="stylesheet.css" />
+ 
+    </head>
+  <body>
+
+  <div class="container">
+
+
+
+<!-- Navigation bar -->
+    <nav id="navbar">
+   
+       <header >Remote Sensing</header> 
+        <hr>
+
+        <div class="nav-links">
+
+        <!-- Links -->
+          <a href="#GIS_definition" class="nav-link">GIS Definition</a>
+          <a href="#Remote_Sensing_overview" class="nav-link">Remote Sensing overview</a>
+          <a href="#Electromagnetic_Spectrum" class="nav-link">Electromagnetic Spectrum</a>
+          <a href="#ES_Regions" class="nav-link">ES Regions</a>
+          <a href="#Sensors" class="nav-link">Sensors</a>
+          <a href="#Radiance_and_Reflectance" class="nav-link">Radiance and Reflectance</a>
+          <a href="#Landsat_Satellites" class="nav-link">Landsat Satellites</a>
+          <a href="#Sentinel-2_Satellite_Bands" class="nav-link">Sentinel-2 Satellite Bands</a>
+          <a href="#Reference" class="nav-link">Reference</a>
+        
+    </div>
+    </nav>
+
+
+
+    <!-- Main documentation  -->
+    <main id="main-doc">
+
+              <!-- Subsequent sections for various sections -->
+              <!-- One(1) -->
+              <section class="main-section" id="GIS_definition">
+                      <header>GIS Definition</header>
+                      <p> 
+                        There are several definitions of GIS (Geographic Information Systems), 
+                        which is not simply a program. In general, GIS are systems that allow for
+                        the use of geographic information (data have spatial coordinates).
+                          In particular, GIS allow for the view, query, calculation and analysis 
+                          of spatial data, which are mainly distinguished in raster or vector data 
+                          structures. Vector is made of objects that can be points, lines or polygons,
+                          and each object can have one ore more attribute values; a raster is a grid
+                            (or image) where each cell has an attribute value (Fisher and Unwin, 2005). 
+                            Several GIS applications use raster images that are derived from remote sensing.
+                      </p>
+                              <p>
+                                <h4>  What is remote sensing and what is it used for?</h4>
+
+                              
+                Remote sensing is the process of detecting and monitoring the physical characteristics of an area by measuring its reflected and emitted radiation at a distance (typically from satellite or aircraft). Special cameras collect remotely sensed images, which help researchers "sense" things about the Earth. Some examples are:
+                <ul>
+                  <li>Cameras on satellites and airplanes take images of large areas on the Earth's surface,
+                    allowing us to see much more than we can standing on the ground.</li>
+                    <li>Sonar systems on ships can be used to create images of the ocean floor 
+                      without needing to travel to the bottom of the ocean.</li>
+
+                      <li>Cameras on satellites can be used to make images of 
+                        temperature changes in the oceans.</li>
+                        <br>
+                <strong> Specific uses of remotely sensed images of the Earth include:</strong>
+
+                <li>Large forest fires can be mapped from space, 
+                  allowing rangers to see a much larger area than from the ground.</li>
+                <li>Tracking clouds to help predict the weather or
+                  watching erupting volcanoes, and help watching for dust storms.</li>
+                <li>Tracking the growth of a city and changes in 
+                  farmland or forests over several years or decades.</li>
+                <li>Discovery and mapping of the rugged topography of 
+                  the ocean floor (e.g., huge mountain ranges, deep canyons, 
+                  and the “magnetic striping” on the ocean floor).</li></ul>
+                        </p>
+                
+
+              </section>
+              <!-- ...........Two(2)................. -->
+              <section class="main-section" id="Remote_Sensing_overview">
+                <header>Remote Sensing overview</header>
+                <p> 
+                  A general definition of Remote Sensing is “the science and technology by which the
+                  characteristics of objects of interest can be identified, measured or analyzed the
+                    characteristics without direct contact” (JARS, 1993).
+                  Usually, remote sensing is the measurement of the energy that is emanated from
+                  the Earth’s surface. If the source of the measured energy is the sun, then it is 
+                  called passive remote sensing, and the result of this measurement can be a digital 
+                  image (Richards and Jia, 2006). If the measured energy is not emitted by the Sun but 
+                  from the sensor platform then it is defined as active remote sensing, such as radar 
+                  sensors which work in the microwave range (Richards and Jia, 2006).
+                  The electromagnetic spectrum is “the system that classifies, according to wavelength, 
+                  all energy (from short cosmic to long radio) that moves, harmonically, at the constant
+                  velocity of light” (NASA, 2013). Passive sensors measure energy from the optical
+                    regions of the electromagnetic spectrum: visible, near infrared (i.e. IR),
+                    short-wave IR, and thermal IR (see Figure  <a href="https://semiautomaticclassificationmanual-v5.readthedocs.io/fr/latest/_images/Electromagnetic-Spectrum.png">Electromagnetic-Spectrum).</a> 
+                    
+                    <br> <br>
+                    
+                
+                    </p>
+              
+
+              </section>
+
+              <!-- ...........Three(3)................. -->
+              <section class="main-section" id="Electromagnetic_Spectrum">
+              <header>Electromagnetic Spectrum</header>
+                <p>
+                  The interaction between solar energy and materials depends on the wavelength; solar energy goes from the Sun to the Earth and then to the sensor. Along this path, solar energy is (NASA, 2013):
+                  <ul id="uls">
+                    <li> 
+                    <em>Transmitted</em> - The energy passes through with a change in
+                      velocity as determined 
+                      by the index of refraction for the two media in question.
+                    </li>
+                    <li> 
+                      <em>Absorbed</em> - The energy is given up to the
+                      object through electron or molecular reactions.
+                    </li>
+                    <li> 
+                    <em>Reflected</em> - The energy is returned unchanged with the angle
+                      of incidence equal to the angle of reflection. Reflectance is 
+                    the ratio of reflected energy to that incident on a body. 
+                      The wavelength reflected (not absorbed) determines the color
+                      of an object.
+                    </li>
+                    <li>
+                    <em>Scattered</em> - The direction of energy propagation is randomly changed.
+                      Rayleigh and Mie scatter are the two most important types of scatter in
+                      the atmosphere.
+                    </li>
+                    <li>
+                    <em>Emitted</em> - Actually, the energy is first absorbed, 
+                      then re-emitted, usually at longer wavelengths. The object heats up.          </li>
+                  </ul>
+                </p>
+
+              
+              </section>
+              <!-- Extra Section -->
+              <section class="main-section" id="ES_Regions">
+                  <header>ES Regions</header>
+                  <p>
+                  <h4>Major regions of the electromagnetic spectrum.</h4>
+        
+                  <div class="table" id="table">
+                    <table>
+                      <code>
+                      <tr>
+                        <th>Region Name</th>
+                        <th>Wavelength</th>
+                        <th>Comments</th>
+                      </tr>
+                    </code>
+                      <tr>
+                        <th>Gamma Ray</th>
+                        <td> &GreaterGreater; 00.3 nanometers </td>
+                        <td>Entirely absorbed by the Earth's atmosphere and not
+                          available for remote sensing.</td>
+                      </tr>
+                      <tr>
+                        <th>X-Ray</th>
+                        <td>  00.3 to 30 nanometers </td>
+                        <td>Entirely absorbed by the Earth's atmosphere and not
+                          available for remote sensing.</td>
+                      </tr>
+                      <tr>
+                        <th>Ultraviolet</th>
+                        <td> 0.03 to 0.4
+                          micrometers </td>
+                        <td>Wavelengths from 0.03 to 0.3 micrometers absorbed by ozone
+                          in the Earth's atmosphere.</td>
+                      </tr>
+                      <tr>
+                        <th>Phootographic Ultraviolet</th>
+                        <td> 0.3 to 0.4
+                          micrometers </td>
+                        <td>Available for remote sensing the Earth. Can be imaged with
+                          cameras and sensors.</td>
+                      </tr>
+                      <tr>
+                        <th>Visible</th>
+                        <td> 0.4 to 0.7
+                          micrometers </td>
+                        <td>Available for remote sensing the Earth. Can be imaged with
+                          cameras and sensors.</td>
+                      </tr>
+                      <tr>
+                        <th>Near and Mid Infrared</th>
+                        <td> 0.7 to 3.0
+                          micrometers </td>
+                        <td>Available for remote sensing the Earth. Can be imaged with
+                          cameras and sensors.</td>
+                      </tr>
+                      <tr>
+                        <th>Thermal Infrared</th>
+                        <td> &LessLess; 0.7 to 3.0
+                          micrometers </td>
+                        <td>Available for remote sensing the Earth. This wavelength
+                          cannot be captured by film cameras. Sensors are used to
+                          image this wavelength band</td>
+                      </tr>
+                      <tr>
+                        <th>Microwave or Radar</th>
+                        <td> 0.1 to 100
+                          Centimeters </td>
+                        <td>Longer wavelengths of this band can pass through clouds,
+                          fog, and rain. Images using this band can be made with
+                          sensors that actively emit microwaves.</td>
+                      </tr>
+                      <tr>
+                        <th>Radio</th>
+                        <td> &GreaterGreater; 100 Centimeters </td>
+                        <td>Not normally used for remote sensing the Earth.</td>
+                      </tr>
+                    </table>   
+                </div>
+                </p>
+              </section>
+
+
+
+              <!-- ...........Four(4)................. -->
+              <section class="main-section" id="Sensors">
+                <header>Sensors</header>
+                <p>
+                  Sensors can be on board of airplanes or on board of satellites, 
+                  measuring the electromagnetic radiation at specific ranges (usually called bands).
+                  As a result, the measures are quantized and converted into a digital image,
+                    where each picture elements (i.e. pixel) has a discrete value in units of 
+                    Digital Number (DN) (NASA, 2013). The resulting images have different characteristics 
+                    (resolutions) depending on the sensor. There are several kinds of resolutions:
+                          </p>
+                <p>
+                  <ul id="uls">
+                    <li> 
+                    <em>Spatial resolution,</em> - 
+                    usually measured in pixel size, “is the resolving power of an instrument
+                      needed for the discrimination of features and is based on detector size, 
+                      focal length, and sensor altitude” (NASA, 2013); 
+                    spatial resolution is also referred to as geometric resolution or IFOV;
+                    </li>
+                    <li> 
+                      <em> Spectral resolution,</em> -
+                      is the number and location in the electromagnetic spectrum
+                      (defined by two wavelengths) of the spectral bands 
+                      (NASA, 2013) in multispectral sensors, for each band corresponds an image;
+                    </li>
+                    <li> 
+                    <em>Reflected</em> - The energy is returned unchanged with the angle
+                      of incidence equal to the angle of reflection. Reflectance is 
+                    the ratio of reflected energy to that incident on a body. 
+                      The wavelength reflected (not absorbed) determines the color
+                      of an object.
+                    </li>
+                    <li>
+                    <em>Radiometric resolution</em> - 
+                    , usually measured in bits (binary digits), is the range of available
+                      brightness values, which in the image correspond to the maximum range of DNs; 
+                      for example an image with 8 bit 
+                    resolution has 256 levels of brightness (Richards and Jia, 2006);
+                    </li>
+                    <li>
+                      For satellites sensors, there is also the <em>temporal resolution</em> -  
+                      temporal resolution, which is the time required for revisiting the same area 
+                      of the Earth (NASA, 2013).  
+                                </li>
+                  </ul>
+                </p>
+
+              </section>
+
+
+
+
+              <!-- ...........Five(5)................. -->
+              <section class="main-section" id="Radiance_and_Reflectance">
+                <header>Radiance and Reflectance</header>
+                <p>
+                  
+                  Sensors measure the radiance, which corresponds 
+                  to the brightness in a given direction toward the sensor; 
+                  it useful to define also the reflectance as the ratio of 
+                  reflected versus total power energy.
+                  
+                
+                </p>
+                <p>
+                  <header>Spectral Signature</header>
+              <code>      The spectral signature is the reflectance as a function of wavelength (
+                      see Figure Spectral Reflectance Curves of Four Different Targets);
+                      each material has a unique signature, therefore it can be used for 
+                      material classification (NASA, 2013).</code>
+                </p>
+                <img src="https://semiautomaticclassificationmanual-v5.readthedocs.io/fr/latest/_images/Spectral_Reflectance_NASA.jpg" alt="Spectral" width="100%">
+                <figcaption>
+                  <code>
+                    Table of spectral signature
+                  </code>
+                </figcaption>
+              </section>
+
+
+              <!-- ...........Six(6)................. -->
+              <section class="main-section" id="Landsat_Satellites">
+                <header>Landsat Satellites</header>
+                <p>
+                  Landsat is a set of multispectral
+                  satellites developed by the NASA 
+                  (National Aeronautics and Space Administration of USA), since 
+                  the early 1970’s.</p>
+                  
+                  
+                <p>Landsat images are very used for environmental research. The
+                  resolutions of Landsat 4 and Landsat 5 sensors are reported in the following 
+                table (from http://landsat.usgs.gov/band_designations_landsat_satellites.php); also, Landsat temporal resolution is 16 days (NASA, 2013).
+                
+                
+                
+                <h4>Landsat 4 and Landsat 5 Bands </h4>
+
+                <div class="table" id="Landsat_4_5" >
+                    <table>
+                      <code>
+                      <tr>
+                        <th>Landsat 4, Landsat 5 Bands</th>
+                        <th>Wavelength[micrometers]</th>
+                        <th>Resolution [meters]</th>
+                      </tr></code>
+                      <tr>
+                        <td>Band 1 - Blue</td>
+                        <td>0.45 - 0.52</td>
+                        <td>30</td>
+                      </tr>
+                      <tr>
+                        <td>Band 2 - Green</td>
+                        <td>0.52 - 0.60</td>
+                        <td>30</td>
+                      </tr>
+                      <tr>
+                        <td>Band 3 - Red</td>
+                        <td>0.63 - 0.69</td>
+                        <td>30</td>
+                      </tr>
+                      <tr>
+                        <td>Band 4 - Near Infrared (NIR)</td>
+                        <td>0.76 - 0.90</td>
+                        <td>30</td>
+                      </tr>
+                      <tr>
+                        <td>Band 5 - SWIR </td>
+                        <td> 1.55 - 1.75</td>
+                        <td>30</td>
+                      </tr>
+                      <tr>
+                        <td>Band 6 - Thermal Infrared </td>
+                        <td> 10.40 - 12.50</td>
+                        <td>120 (resampled to 30)</td>
+                      </tr>
+                      <tr>
+                        <td>Band 7 - SWIR </td>
+                        <td> 2.08 - 2.35</td>
+                        <td>15</td>
+                      </tr>
+                    
+                    </table>   
+                </div>
+                </p>
+
+                <p>
+                  The resolutions of Landsat 7 sensor are reported in
+                  the following table
+                    (from <a href=" http://landsat.usgs.gov/band_designations_landsat_satellites.php">here</a> );
+                  also, Landsat temporal resolution is 16 days (NASA, 2013).
+                <h4>Landsat 7 Bands </h4>
+
+                <div class="table"  id="Landsat_7">
+                    <table>
+                    <code> <tr>
+                        <th>Landsat 7 Bands</th>
+                        <th>Wavelength [micrometers]</th>
+                        <th>Resolution [meters]</th>
+                      </tr></code>
+                      <tr>
+                        <td>Band 1 - Blue</td>
+                        <td>0.45 - 0.52</td>
+                        <td>30</td>
+                      </tr>
+                      <tr>
+                        <td>Band 2 - Green</td>
+                        <td>0.52 - 0.60</td>
+                        <td>30</td>
+                      </tr>
+                      <tr>
+                        <td>Band 3 - Red</td>
+                        <td>0.63 - 0.69</td>
+                        <td>30</td>
+                      </tr>
+                      <tr>
+                        <td>Band 4 - Near Infrared (NIR)</td>
+                        <td>0.76 - 0.90</td>
+                        <td>30</td>
+                      </tr>
+                      <tr>
+                        <td>Band 5 - SWIR </td>
+                        <td> 1.55 - 1.75</td>
+                        <td>30</td>
+                      </tr>
+                      <tr>
+                        <td>Band 6 - Thermal Infrared </td>
+                        <td> 10.40 - 12.50</td>
+                        <td>60 (resampled to 30)</td>
+                      </tr>
+                      <tr>
+                        <td>Band 7 - SWIR </td>
+                        <td> 2.09 - 2.35</td>
+                        <td>30</td>
+                      </tr>
+                      <tr>
+                        <td>Band 8 - Panchromatic </td>
+                        <td> 0.52 - 0.90</td>
+                        <td>30</td>
+                      </tr>
+                    
+                    </table>   
+                </p>
+
+                <p>
+                The resolutions of Landsat 8 sensor are reported in 
+                the following table (from <a href=" http://landsat.usgs.gov/band_designations_landsat_satellites.php">here</a> );
+                  also, Landsat temporal resolution is 16 days (NASA, 2013).
+                <h4>Landsat 8 Bands </h4>
+
+                <div class="table"  id="Landsat_7">
+                    <table>
+                  <code>   <tr>
+                        <th>Landsat 8 Bands</th>
+                        <th>Wavelength [micrometers]</th>
+                        <th>Resolution [meters]</th>
+                      </tr></code>
+                      <tr>
+                        <td>Band 1 - Coastal aerosol</td>
+                        <td>0.43 - 0.45</td>
+                        <td>30</td>
+                      </tr>
+                      <tr>
+                        <td>Band 2 - Blue</td>
+                        <td>0.45 - 0.51</td>
+                        <td>30</td>
+                      </tr>
+                      <tr>
+                        <td>Band 3 - Green</td>
+                        <td>0.53 - 0.59</td>
+                        <td>30</td>
+                      </tr>
+                      <tr>
+                        <td>Band 4 - Red</td>
+                        <td>0.64 - 0.67</td>
+                        <td>30</td>
+                      </tr>
+                      <tr>
+                        <td>Band 5 - Near Infrared (NIR) </td>
+                        <td> 0.85 - 0.88</td>
+                        <td>30</td>
+                      </tr>
+                      <tr>
+                        <td>Band 6 - SWIR 1 </td>
+                        <td> 1.57 - 1.65</td>
+                        <td>30</td>
+                      </tr>
+                      <tr>
+                        <td>Band 7 - SWIR 2 </td>
+                        <td> 2.11 - 2.29</td>
+                        <td>30</td>
+                      </tr>
+                      <tr>
+                        <td>Band 8 - Panchromatic </td>
+                        <td> 0.50 - 0.68</td>
+                        <td>15</td>
+                      </tr>
+                      <tr>
+                        <td>Band 9 - Cirrus </td>
+                        <td> 1.36 - 1.38</td>
+                        <td>30</td>
+                      </tr>
+                      <tr>
+                        <td>Band 10 - Thermal Infrared (TIRS) 1 </td>
+                        <td> 10.60 - 11.19</td>
+                        <td>100 (resampled to 30) </td>
+                      </tr>
+                      <tr>
+                        <td>Band 11 - Thermal Infrared (TIRS) 2 </td>
+                        <td> 11.50 - 12.51</td>
+                        <td>100 (resampled to 30) </td>
+                      </tr>
+                    
+                    </table>   
+                    <p>
+                      A vast archive of images is freely available from the
+                      U.S. Geological Survey . For more information about 
+                      how to freely download Landsat images read this .
+
+                        Images are identified with the paths and rows of the WRS
+                        (Worldwide Reference System for Landsat ).
+                    </p>
+                </p>
+
+              </section>
+                <!-- ...........Seven(7)................. -->
+                <section class="main-section" id="Sentinel-2_Satellite_Bands">
+                  <header>Sentinel-2 Satellite Bands</header>
+                        
+                <p>
+                  Sentinel-2 is a multispectral satellite developed by 
+                  the European Space Agency (ESA) in the frame of Copernicus 
+                  land monitoring services. Sentinel-2 acquires 13 spectral
+                  bands with the spatial resolution of 10m, 20m and 60m 
+                  depending on the band, as illustrated in the following 
+                  table (ESA, 2015).
+
+
+          
+
+                <div class="table" >
+                    <table>
+                      <tr>
+                        <th>Sentinel-2 Bands</th>
+                        <th>Central Wavelength [micrometers]</th>
+                        <th>Resolution [meters]</th>
+                      </tr>
+                      <tr>
+                        <td>Band 1 - Coastal aerosol</td>
+                        <td>0.443</td>
+                        <td>60</td>
+                      </tr>
+                      <tr>
+                        <td>Band 2 - Blue</td>
+                        <td>0.490</td>
+                        <td>10</td>
+                      </tr>
+                      <tr>
+                        <td>Band 3 - Green</td>
+                        <td>0.560</td>
+                        <td>10</td>
+                      </tr>
+                      <tr>
+                        <td>Band 4 - Red</td>
+                        <td>0.665</td>
+                        <td>10</td>
+                      </tr>
+                      <tr>
+                        <td>Band 5 - Vegetation RED Edge </td>
+                        <td> 0.705</td>
+                        <td>20</td>
+                      </tr>
+                      <tr>
+                        <td>Band 6 - Vegetation RED Edge </td>
+                        <td>0.740</td>
+                        <td>20</td>
+                      </tr>
+                      <tr>
+                        <td>Band 7 - Vegetation RED Edge </td>
+                        <td> 0.783</td>
+                        <td>20</td>
+                      </tr>
+                      <tr>
+                        <td>Band 8 - NIR </td>
+                        <td>0.865</td>
+                        <td>10</td>
+                      </tr>
+                      <tr>
+                        <td>Band 8A - Vegetation RED Edge </td>
+                        <td> 0.865</td>
+                        <td>20</td>
+                      </tr>
+                      <tr>
+                        <td>Band 9 - Water vapour </td>
+                        <td> 0.945</td>
+                        <td>60</td>
+                      </tr>
+                      <tr>
+                        <td>Band 10 - SWIR - Cirrus </td>
+                        <td> 1.375</td>
+                        <td>60</td>
+                      </tr>
+                      <tr>
+                        <td>Band 11 - SWIR </td>
+                        <td> 1.610</td>
+                        <td>20 </td>
+                      </tr>
+                      <tr>
+                        <td>Band 12 - SWIR </td>
+                        <td> 2.190</td>
+                        <td>20 </td>
+                      </tr>
+                    
+                    </table>   
+                    <p>
+                      Sentinel-2 images are
+                      freely available from the ESA 
+                      <a href=" https://scihub.esa.int/dhus/">website</a> .
+                    </p>
+                </p>
+              </section>
+              <!-- ...........Six(6)................. -->
+              <section class="main-section" id="Reference" >
+                <header>Reference</header>
+                <p>
+                <code> <a href="https://www.usgs.gov/faqs/what-remote-sensing-and-what-it-used?qt-news_science_products=0#qt-news_science_products">USGS Website</a></code>
+                </p>
+        
+
+              </section>
+
+
+    </main>
+
+    
+
+
+  </div>
+
+
+
+
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  </body>
+</html>
+
